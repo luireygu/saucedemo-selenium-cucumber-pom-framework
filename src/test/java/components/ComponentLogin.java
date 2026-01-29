@@ -20,7 +20,11 @@ public class ComponentLogin extends BasePage {
         click(LocatorsLogin.btnLogin);
     }
     public boolean ErrorMessage(){
-        return waitVisibleElement(LocatorsLogin.errorMessage).isDisplayed();
+        try {
+            return waitVisibleElement(LocatorsLogin.errorMessage).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 }

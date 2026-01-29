@@ -4,21 +4,23 @@ import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import locators.LocatorsProducts;
 
-public class ComponentProducs extends BasePage {
+public class ComponentProducts extends BasePage {
 
-    public ComponentProducs(WebDriver driver){
+    public ComponentProducts(WebDriver driver){
         super(driver);
     }
     public boolean productsTitleVisible(){
-        return waitVisibleElement(LocatorsProducts.title).isDisplayed();
-    }
-    public void clickAddProductBackpack(){
-        if (waitVisibleElement(LocatorsProducts.addProductBackpack).isDisplayed()){
-            click(LocatorsProducts.addProductBackpack);
+        try {
+            return waitVisibleElement(LocatorsProducts.title).isDisplayed();
+        } catch (Exception e) {
+            return false;
         }
     }
+    public void clickAddProductBackpack(){
+            click(LocatorsProducts.addProductBackpack);
+    }
     public String counterProductCart(){
-       return getText(LocatorsProducts.addedProductsCounter);
+        return waitVisibleElement(LocatorsProducts.addedProductsCounter).getText();
     }
     public void clickShoppingCartBtn(){
         click(LocatorsProducts.shoppingCartButton);

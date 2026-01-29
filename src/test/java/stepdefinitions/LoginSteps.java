@@ -32,19 +32,4 @@ public class LoginSteps {
     public void debeVerUnMensajeDeError() {
         Assertions.assertTrue(loginPage.isErrorMessageVisible(), "❌ No se mostró el mensaje de error");
     }
-    /*
-      Scenario: Login exitoso con credenciales válidas
-    Given el usuario está en la página de login
-    When ingresa usuario "standard_user" y contraseña "secret_sauce"
-    Then debe ver la página de productos
-
-
-  Scenario: Login fallido con contraseña incorrecta
-    Given el usuario está en la página de login
-    When ingresa usuario "standard_user" y contraseña "wrong_password"
-    Then debe ver un mensaje de error
-
-
-     */
-
 }

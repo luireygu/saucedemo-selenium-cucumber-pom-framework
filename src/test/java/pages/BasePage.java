@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.DriverFactory;
 
 import java.time.Duration;
 
@@ -23,8 +22,9 @@ public class BasePage {
     }
 
     public void sendKeys(By locator,String textSend){
-        waitVisibleElement(locator).clear();
-        waitVisibleElement(locator).sendKeys(textSend);
+        WebElement element = waitVisibleElement(locator);
+        element.clear();
+        element.sendKeys(textSend);
     }
     public void click(By locator){
         waitVisibleElement(locator).click();

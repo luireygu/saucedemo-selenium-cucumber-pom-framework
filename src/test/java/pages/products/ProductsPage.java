@@ -1,33 +1,33 @@
 package pages.products;
 
-import components.ComponentProducs;
+import components.ComponentProducts;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.cart.CartPage;
 
 public class ProductsPage extends BasePage {
 
-    private final ComponentProducs componentProducs;
+    private final ComponentProducts componentProducts;
 
 
     public ProductsPage(WebDriver driver){
         super(driver);
-        this.componentProducs = new ComponentProducs(driver);
+        this.componentProducts = new ComponentProducts(driver);
 
     }
 
     public boolean isProductsTitleVisible(){
-        return componentProducs.productsTitleVisible();
+        return componentProducts.productsTitleVisible();
     }
 
     public void clickAddBackPack(){
-        componentProducs.clickAddProductBackpack();
+        componentProducts.clickAddProductBackpack();
     }
     public String totalProductsAdded(){
-        return componentProducs.counterProductCart();
+        return componentProducts.counterProductCart();
     }
     public CartPage clickShoppingCart(){
-        componentProducs.clickShoppingCartBtn();
+        componentProducts.clickShoppingCartBtn();
         return new CartPage(driver);
 
     }

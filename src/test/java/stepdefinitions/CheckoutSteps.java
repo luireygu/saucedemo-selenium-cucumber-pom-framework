@@ -41,7 +41,7 @@ public class CheckoutSteps {
     }
     @Then("debe ver el mensaje de compra exitosa")
     public void debeVerElMensajeDeCompraExitosa(){
-        Assertions.assertEquals(checkoutPage.textSuccessfull(),expectedText,"La cantidad de productos añadidos es diferente a 1 ");
+        Assertions.assertEquals(checkoutPage.getSuccessfulPurchaseText(),expectedText,"La cantidad de productos añadidos es diferente a 1 ");
     }
 
 }

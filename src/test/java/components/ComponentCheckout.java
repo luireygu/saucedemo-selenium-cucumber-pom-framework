@@ -2,6 +2,7 @@ package components;
 
 import locators.LocatorsProducts;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import pages.BasePage;
 import locators.LocatorsCheckout;
 
@@ -17,7 +18,11 @@ public class ComponentCheckout extends BasePage {
         sendKeys(LocatorsCheckout.lastName,lastName);
     }
     public void sendkeysPostalCode(String postalCode) {
-        sendKeys(LocatorsCheckout.postalCode, postalCode);
+        WebElement input = waitVisibleElement(LocatorsCheckout.postalCode);
+        input.click();
+        input.clear();
+        input.sendKeys(postalCode);
+        //sendKeys(LocatorsCheckout.postalCode, postalCode);
     }
     public void clickbtncontinue(){
         click(LocatorsCheckout.btrContinue);

@@ -24,7 +24,7 @@ public class CheckoutPage extends BasePage {
         componentCheckout.clickbtnCompletePurchase();
     }
 
-    public String textSuccessfull(){
+    public String getSuccessfulPurchaseText(){
         return componentCheckout.successfullPurchaseText();
     }
 

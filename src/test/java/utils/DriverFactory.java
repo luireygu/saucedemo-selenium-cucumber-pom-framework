@@ -11,11 +11,6 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
-/*
-crear driver
-crear espera
-crear getters
- */
 public class DriverFactory {
 
     private static final int PAGE_TIMEOUT = 30;
