@@ -1,0 +1,21 @@
+package hooks;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import org.openqa.selenium.WebDriver;
+import utils.ConfigReader;
+import utils.DriverFactory;
+
+public class Hooks {
+
+    @Before
+    public void setup(){
+        DriverFactory.initDriver();
+        DriverFactory.getDriver().get(ConfigReader.getProperty("baseUrl"));
+    }
+
+    @After
+    public void tearDown(){
+ //       DriverFactory.quitDriver();
+    }
+}

@@ -1,0 +1,35 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.DriverFactory;
+
+import java.time.Duration;
+
+public class BasePage {
+    protected WebDriver driver;
+    protected WebDriverWait wait;
+
+    public BasePage(WebDriver driver){
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    public WebElement waitVisibleElement(By locator){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public void sendKeys(By locator,String textSend){
+        waitVisibleElement(locator).clear();
+        waitVisibleElement(locator).sendKeys(textSend);
+    }
+    public void click(By locator){
+        waitVisibleElement(locator).click();
+    }
+    public String getText(By locator){
+        return waitVisibleElement(locator).getText();
+    }
+}
