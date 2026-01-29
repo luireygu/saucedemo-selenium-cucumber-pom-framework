@@ -1,5 +1,5 @@
 ---
-__🚀 Proyecto de Automatización Web – Selenium + Cucumber + POM__
+__🚀 Proyecto de Automatización saucedemo - Web – Selenium + Cucumber + POM__
 
 
 Este repositorio contiene un framework de automatización web desarrollado en Java, utilizando Selenium WebDriver, Cucumber (BDD), JUnit y Gradle, aplicando buenas prácticas de Page Object Model (POM) y una arquitectura escalable y mantenible.
