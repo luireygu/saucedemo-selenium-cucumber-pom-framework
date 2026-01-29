@@ -57,7 +57,8 @@ __🧩 Arquitectura aplicada__
 
 ---
 
-__👤 Autor__
-    Luis Reyes QA Functional & Automation Engineer
-    GitHub: https://github.com/luireygu
+__👤 Autor__   
+   
+    Luis Reyes QA Functional & Automation Engineer   
+    GitHub: https://github.com/luireygu   
 __💬 Este proyecto fue desarrollado como ejercicio práctico para fortalecer habilidades en automatización de pruebas web y buenas prácticas de diseño de frameworks.__
